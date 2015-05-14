@@ -1,4 +1,4 @@
-package com.test.reflect;
+package com.practise.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

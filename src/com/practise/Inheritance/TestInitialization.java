@@ -1,4 +1,4 @@
-package com.test.Inheritance;
+package com.practise.Inheritance;
 
 
 

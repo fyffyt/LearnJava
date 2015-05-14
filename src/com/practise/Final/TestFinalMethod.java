@@ -1,4 +1,4 @@
-package com.test.Final;
+package com.practise.Final;
 
 class Base{
 	private String name;

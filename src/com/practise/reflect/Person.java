@@ -1,4 +1,4 @@
-package com.test.reflect;
+package com.practise.reflect;
 
 public class Person {
 	private String name;

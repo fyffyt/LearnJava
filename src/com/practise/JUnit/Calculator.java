@@ -1,4 +1,4 @@
-package com.test.JUnit;
+package com.practise.JUnit;
 import static org.junit.Assert.assertEquals;
 
 public class Calculator {
