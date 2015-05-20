@@ -42,6 +42,8 @@ public abstract class PractiseInnerClass {
 		
 		lv2_1.show();
 		lv2_2.show();
+		
+		System.out.println(System.currentTimeMillis());
 	}
 
 }
