@@ -39,6 +39,8 @@ public abstract class PractiseContainer {
 		
 		HashMap hm = new HashMap();
 		
+		LinkedHashMap lhm = new LinkedHashMap();
+		
 		TreeMap tm = new TreeMap();
 		
 	}
