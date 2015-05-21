@@ -29,7 +29,7 @@ public abstract class PractiseContainer {
 			
 		}
 		ListIterator lit = l.listIterator();
-		lit.
+		
 		while(lit.hasNext()){
 			System.out.println(lit.next());
 		}
