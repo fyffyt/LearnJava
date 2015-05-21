@@ -34,6 +34,7 @@ public class Person {
 		this.age = age;
 	}
 	public String toString(){
-		return "姓名:"+name+"年龄:"+age;
+		String str = super.toString();
+		return "姓名:"+name+"年龄:"+age+str;
 	}
 }
