@@ -7,11 +7,12 @@ public class TestReflection {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Person p = new Person("fyf","male",33);
+		System.out.println(p.toString());
 		new ReflectDemo(p);
 		
 		Class<?> demo = null;
 		try{
-			demo = Class.forName("com.test.reflect.Person");
+			demo = Class.forName("com.practise.reflect.Person");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
