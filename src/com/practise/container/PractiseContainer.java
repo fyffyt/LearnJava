@@ -2,6 +2,31 @@ package com.practise.container;
 
 import java.util.*;
 import java.lang.reflect.*;
+import java.lang.Math;
+
+
+class ListTester{
+	public ListTester(int quan){
+		scale = (int)Math.pow(10,quan);
+	}
+	public void test(List l){
+		System.out.println("start test "+l.toString()+" with scale "+scale);
+		for(int i = 0; i < scale; i++){
+			l.add(i);
+		}
+		for(int i = 0; i < scale; i++){
+			l.get(i);
+		}
+		for(int i = 0; i < scale; i++){
+			l.;
+		}
+		for(int i = 0; i < scale; i++){
+			l.add(i);
+		}
+	}
+	
+	private final int scale;
+}
 
 public abstract class PractiseContainer {
 
@@ -10,31 +35,16 @@ public abstract class PractiseContainer {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Class<?> demo = null;
-		try {
-			demo = Class.forName("java.util.Arrays");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Method [] methods = demo.getMethods();
 		
-		for (Method method:methods){
-			System.out.println(method.toString());
-		}
 		
-		List l = new ArrayList();
-		for (int i=0;i<10;i++){
-			l.add(Integer.toString(i));
-			
-		}
-		ListIterator lit = l.listIterator();
+		ArrayList al = new ArrayList();
 		
-		while(lit.hasNext()){
-			System.out.println(lit.next());
-		}
-		LinkedHashSet lhs1 = new LinkedHashSet();
-		lhs1.add("a");
+		LinkedList ll = new LinkedList();
+		
+		HashSet hs = new HashSet();
+		
+		LinkedHashSet lhs = new LinkedHashSet();
+		
 		TreeSet ts = new TreeSet();
 		
 		HashMap hm = new HashMap();
@@ -42,6 +52,9 @@ public abstract class PractiseContainer {
 		LinkedHashMap lhm = new LinkedHashMap();
 		
 		TreeMap tm = new TreeMap();
+		
+		System.out.println((int)Math.pow(3, 3));
+		
 		
 	}
 
