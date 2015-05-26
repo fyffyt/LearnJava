@@ -18,7 +18,7 @@ class ListTester{
 			l.get(i);
 		}
 		for(int i = 0; i < scale; i++){
-			l.;
+			l.contains('a');
 		}
 		for(int i = 0; i < scale; i++){
 			l.add(i);
