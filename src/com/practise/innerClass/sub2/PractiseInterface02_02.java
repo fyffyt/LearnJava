@@ -8,9 +8,7 @@ package com.practise.innerClass.sub2;
  * @author jolyon
  *
  */
-class Animal implements Creature{
-	
-}
+
 public class PractiseInterface02_02 {
 
 	/**
