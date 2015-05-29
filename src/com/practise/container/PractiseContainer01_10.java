@@ -31,12 +31,12 @@ class Gerbil {
  * @author jolyon
  *
  */
-public class PractiseContainer01_04 {
+public class PractiseContainer01_10 {
 
 	/**
 	 * 
 	 */
-	public PractiseContainer01_04() {
+	public PractiseContainer01_10() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -86,6 +86,11 @@ public class PractiseContainer01_04 {
 		}
 		
 		// practise 05
+		
+		// practise 06
+		// gerbilArray.add(new Object());
+		
+		//
 		
 	}
 

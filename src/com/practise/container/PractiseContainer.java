@@ -3,7 +3,7 @@ package com.practise.container;
 import java.util.*;
 import java.lang.reflect.*;
 import java.lang.Math;
-
+import com.googlecode.concurrentlinkedhashmap.*;
 
 class ListTester{
 	public ListTester(int quan){
@@ -53,7 +53,23 @@ public abstract class PractiseContainer {
 		
 		TreeMap tm = new TreeMap();
 		
-		System.out.println((int)Math.pow(3, 3));
+		ConcurrentLinkedHashMap<Integer,Integer> clhm = new ConcurrentLinkedHashMap.Builder<Integer,Integer>().maximumWeightedCapacity(5).weigher(Weighers.singleton()).build();
+		clhm.put(4,4);
+		clhm.put(3,3);
+		clhm.put(7,7);
+		clhm.put(5,5);
+		clhm.put(8, 8);
+		clhm.put(6, 6);
+		Set<Integer> clhmAscendingKeySet = clhm.ascendingKeySet();
+		Iterator<Integer> clhmAscendingKeySetIter = clhmAscendingKeySet.iterator();
+		while(clhmAscendingKeySetIter.hasNext()){
+			System.out.println(clhmAscendingKeySetIter.next());
+		}
+		System.out.println(clhm.remove(7));
+		System.out.println(clhm.ascendingKeySet());
+		clhm.get(5);
+		System.out.println(clhm.ascendingKeySet());
+
 		
 		
 	}
