@@ -81,6 +81,11 @@ class ContainerP11<T> {
 			return null;
 		}
 		
+		@Override
+		public void remove(){
+			
+		}
+		
 	}
 	private int size;
 	private int capacity;
