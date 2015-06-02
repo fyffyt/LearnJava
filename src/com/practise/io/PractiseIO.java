@@ -55,7 +55,6 @@ public class PractiseIO {
 			});
 		System.out.println(Arrays.toString(list));
 		
-		
 	}
 
 }
