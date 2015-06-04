@@ -54,6 +54,55 @@ public class PractiseIO {
 				
 			});
 		System.out.println(Arrays.toString(list));
+		try {
+//			FileReader fileReader = new FileReader("test");
+//			char c;
+//			System.out.println();
+//			//while((c = (char)fileReader.read())!= -1){//infinite loop, why? -1-->char? char --> int?
+//			while((c = (char)fileReader.read())!= (char)-1){
+//						System.out.print(c);
+//			}
+//			fileReader.close();
+			
+//			CharArrayReader caReader = new CharArrayReader(new FileReader("test"));
+			
+//			StringReader strReader = new StringReader(new FileReader("test"));
+			
+//			PipedReader pipedReader = new PipedReader(new FileReader("test"));
+			try {
+				DataOutputStream out2 = new DataOutputStream(
+				new BufferedOutputStream(
+				new FileOutputStream("Data.txt")));
+				out2.writeDouble(3.14159);
+				out2.writeUTF("That was pi");
+				out2.writeDouble(1.41413);
+				out2.writeUTF("Square root of 2");out2.close();
+				DataInputStream in5 = new DataInputStream(
+				new BufferedInputStream(
+				new FileInputStream("Data.txt")));
+				// Must use DataInputStream for data:
+				System.out.println(in5.readDouble());
+				// Only readUTF() will recover the
+				// Java-UTF String properly:
+				System.out.println(in5.readUTF());
+				// Read the following double and String:
+				System.out.println(in5.readDouble());
+				System.out.println(in5.readUTF());
+			} catch(EOFException e) {
+				throw new RuntimeException(e);
+			}
+//			BufferedReader stdin = new BufferedReader(new FileReader("test"));
+//			 String line;
+//			 while((line = stdin.readLine()) != null){
+//				 System.out.println(line);
+//			 }
+			 
+			 
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
