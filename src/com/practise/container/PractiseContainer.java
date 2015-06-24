@@ -70,7 +70,7 @@ public abstract class PractiseContainer {
 		clhm.get(5);
 		System.out.println(clhm.ascendingKeySet());
 
-		
+		HashMap<Integer,Integer> ihm = new HashMap<Integer,Integer>();  
 		
 	}
 

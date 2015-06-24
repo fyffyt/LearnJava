@@ -7,6 +7,8 @@ import java.util.*;
 import java.io.*;
 import java.util.regex.*;
 import java.util.Comparator;
+import java.nio.*;
+import java.nio.charset.Charset;
 
 /**
  * @author jolyon
@@ -54,6 +56,7 @@ public class PractiseIO {
 				
 			});
 		System.out.println(Arrays.toString(list));
+
 		try {
 //			FileReader fileReader = new FileReader("test");
 //			char c;
@@ -88,6 +91,26 @@ public class PractiseIO {
 				// Read the following double and String:
 				System.out.println(in5.readDouble());
 				System.out.println(in5.readUTF());
+//				
+//				Charset csetUTF8 = Charset.forName("UTF-8");
+//				Charset csetUTF16 = Charset.forName("UTF-16");
+//				
+//				ByteBuffer bbuf8 = csetUTF8.encode("1234");
+//				ByteBuffer bbuf16 = csetUTF16.encode("1234");
+//				
+//				System.out.println(Arrays.toString(bbuf8.array()));
+//				System.out.println(Arrays.toString(bbuf16.array()));
+//				
+//				System.out.println(csetUTF8.decode(bbuf8).toString());
+//				System.out.println(csetUTF8.decode(bbuf16).toString());
+//				System.out.println(csetUTF16.decode(bbuf8).toString());
+//				System.out.println(csetUTF16.decode(bbuf16).toString());
+				DataInputStream in6 = new DataInputStream(
+						new BufferedInputStream(
+						new FileInputStream("Data.txt")));
+				System.out.println(in6.readDouble());
+				
+				
 			} catch(EOFException e) {
 				throw new RuntimeException(e);
 			}

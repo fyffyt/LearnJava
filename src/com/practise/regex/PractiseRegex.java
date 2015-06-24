@@ -17,6 +17,7 @@ public class PractiseRegex {
 		// TODO Auto-generated method stub
 		Pattern pattern = Pattern.compile("\\d{4}");
 		Matcher m = pattern.matcher("03-04-2015-2017");
+		System.out.println(m.matches());
 		while(m.find()){
 			System.out.println(m.group());
 		}
