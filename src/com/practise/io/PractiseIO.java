@@ -15,7 +15,7 @@ import java.nio.charset.Charset;
  *
  */
 
-class AlphabeticComparator<T> implements Comparator<T>{
+class AlphabeticComparator<T> implements Serializable,Comparator<T>{
 
 	@Override
 	public int compare(Object o1, Object o2) {
@@ -119,10 +119,23 @@ public class PractiseIO {
 //			 while((line = stdin.readLine()) != null){
 //				 System.out.println(line);
 //			 }
-			 
-			 
+			ObjectOutputStream out = new ObjectOutputStream(
+									 new BufferedOutputStream(
+									 new FileOutputStream("obj.dat")));
+			out.writeObject(new AlphabeticComparator());
+			out.close();
+			ObjectInputStream in = new ObjectInputStream(
+					 new BufferedInputStream(
+					 new FileInputStream("obj.dat")));			
+
+			AlphabeticComparator diff = (AlphabeticComparator)in.readObject();
+			
+			System.out.println(diff.toString());
 			
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
