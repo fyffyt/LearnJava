@@ -72,6 +72,7 @@ public abstract class PractiseContainer {
 
 		HashMap<Integer,Integer> ihm = new HashMap<Integer,Integer>();  
 		
+		
 	}
 
 }
