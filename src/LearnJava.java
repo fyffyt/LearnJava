@@ -1,7 +1,7 @@
 /**
  * 
  */
-
+import java.io.*;
 /**
  * @author jolyon
  *
@@ -20,6 +20,8 @@ public class LearnJava {
 		System.out.println(s1 == s2);
 		System.out.println(s3 == s2);
 		System.out.println(s3 == s4);
+		
+		System.out.println(new File("/home/ab.txt").getName());
 		
 	}
 
