@@ -24,7 +24,6 @@ class ListTester{
 			l.add(i);
 		}
 	}
-	
 	private final int scale;
 }
 
