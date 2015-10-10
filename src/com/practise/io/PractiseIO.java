@@ -79,7 +79,8 @@ public class PractiseIO {
 				out2.writeDouble(3.14159);
 				out2.writeUTF("That was pi");
 				out2.writeDouble(1.41413);
-				out2.writeUTF("Square root of 2");out2.close();
+				out2.writeUTF("Square root of 2");
+				out2.close();
 				DataInputStream in5 = new DataInputStream(
 				new BufferedInputStream(
 				new FileInputStream("Data.txt")));

@@ -25,7 +25,16 @@ public class PractiseByteArrayInputStream {
 			e.printStackTrace();
 		}
 
-		System.out.println(Arrays.toString(new int[][]{{1,1},{2,2},{3,3}}));
+		//System.out.println(Arrays.toString(new int[][]{{1,1},{2,2},{3,3}}));
+		
+		try {
+			DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream("Data.txt")));
+		    byte[] buf = null;
+		    in.readFully(buf);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		
