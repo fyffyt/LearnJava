@@ -1,4 +1,4 @@
-package com.practise.decorator;
+package com.practise.design_pattern.decorator;
 
 interface Component {
 
