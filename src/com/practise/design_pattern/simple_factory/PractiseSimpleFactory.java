@@ -1,7 +1,5 @@
 package com.practise.design_pattern.simple_factory;
 
-
-
 public class PractiseSimpleFactory {
 
 	/**
@@ -16,10 +14,6 @@ public class PractiseSimpleFactory {
 		
 		Instrument i2 = fc.getInstrument("violin");
 		i2.play();
-		
-		Object i3 = fc.getInstrument("xx");
-		
-		System.out.println(i3.getClass());
 		
 	}
 

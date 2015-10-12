@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class ReflectDemo {
 	public ReflectDemo(Person p){
-		Class cla = p.getClass();
+		Class<?> cla = p.getClass();
 		Method[] method =cla.getDeclaredMethods();
 		for(Method meth:method){
 			System.out.println(meth.toString());
