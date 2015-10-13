@@ -9,6 +9,34 @@ import java.nio.charset.Charset;
  * @author jolyon
  *
  */
+class Base {
+	class Tag1{
+		public Tag1(){
+			System.out.println("Tag1.");
+			System.out.println(i1);
+		}
+	}
+	
+	public Base(){
+		System.out.println("Base constructor.");
+	}
+	int i1=101;
+	private Tag1 tag = new Tag1();
+}
+class Derived extends Base {
+	class Tag2{
+		public Tag2(){
+			System.out.println("Tag2.");
+		}
+	}
+	
+	public Derived(){
+		System.out.println("Derived constructor.");
+		System.out.println(i2);
+	}
+	int i2=202;
+	private Tag2 tag = new Tag2();
+}
 public class LearnJava {
 
 	/**
@@ -16,45 +44,13 @@ public class LearnJava {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BufferedWriter out1 = null;
-		BufferedReader in1 = null;
-		DataOutputStream out2 = null;
-		DataInputStream in2 = null;		
-		
-		try {
-			out1 = new BufferedWriter(new FileWriter("data1.txt"));
-			out1.write("汉字");
-			out1.close();
-			out2 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("data2.txt")));
-			out2.writeUTF("汉字");
 
-			out2.close();
-			byte[] byteArr = new byte[3];
-			
-			in1 = new BufferedReader(new FileReader("data1.txt"));
-			System.out.println((char)in1.read());
-
-//			byte[] byteArr = new byte[3];
-//			in.read(byteArr);
-//			System.out.println(Charset.forName("UTF-8").decode(ByteBuffer.wrap(byteArr)));	
-			
-			in2 = new DataInputStream(new FileInputStream("data2.txt"));
-			in2.read(byteArr);
-			System.out.println(byteArr[0]);
-			System.out.println(byteArr[1]);
-			System.out.println(byteArr[2]);
-//			System.out.println(Charset.forName("UTF-8").decode(ByteBuffer.wrap(byteArr)));	
-			
-//			System.out.println(in2.readUTF());
-			
-			in1.close();
-			in2.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-
+		String s1 = "abc";
+		String s2 = "abc";
+		System.out.println(s1 == s2);
+		s1 += "d";
+		System.out.println(s2);
+		System.out.println(s1 == s2);
 		
 	}
 

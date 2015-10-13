@@ -2,7 +2,8 @@ package com.practise.design_pattern.observer;
 
 import java.util.Observable;
 import java.util.Observer;
-import com.practise.ai.*;
+
+import com.practise.todo.*;
 
 public abstract class ConceptualObject extends Observable implements Observer{
 	public ConceptualObject(){
