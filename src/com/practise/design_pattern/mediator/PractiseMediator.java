@@ -1,6 +1,6 @@
-package com.practise.design_pattern.agent;
+package com.practise.design_pattern.mediator;
 
-public class PractiseAgent {
+public class PractiseMediator {
 
 	/**
 	 * @param args

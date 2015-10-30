@@ -1,6 +1,6 @@
-package com.practise.design_pattern.creator;
+package com.practise.design_pattern.builder;
 
-public class PractiseCreater {
+public class PractiseBuilder {
 
 	/**
 	 * @param args
