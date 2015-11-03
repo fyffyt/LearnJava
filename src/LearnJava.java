@@ -85,7 +85,13 @@ public class LearnJava {
 		
 		Vector<Object> vec = new Vector<Object>(10);
 		
+		Object o1 = new Object();
+		Object o2 = new Object();
+		
+		vec.add(o1);
+
 		System.out.println(vec.get(0));
+		System.out.println(vec.get(0).equals(o2));
 		
 	}
 
