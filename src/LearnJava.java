@@ -90,7 +90,6 @@ public class LearnJava {
 		
 		vec.add(o1);
 
-		System.out.println(vec.get(0));
 		System.out.println(vec.get(0).equals(o2));
 		
 	}
