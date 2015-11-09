@@ -5,7 +5,7 @@ import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
-import java.util.Vector;
+import java.util.*;
 /**
  * @author jolyon
  *
@@ -18,6 +18,12 @@ class Base {
 	BaseState state = null;
 	void getState(){
 		System.out.println(state.msg);
+		try {
+			this.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	void setState(BaseState specifiedState){
 		state = specifiedState;
@@ -31,6 +37,9 @@ class Base {
 	}
 }
 class Derived extends Base {
+	Derived(Derived d){
+		
+	}
 	void sayHi(){
 		System.out.println("Hi, this is Derived.");
 		super.sayHi();
@@ -41,8 +50,7 @@ class Derived extends Base {
 	}
 
 	void getState(){
-		System.out.println(this.state.msg);
-		System.out.println(super.state.msg);
+		super.getState();
 		System.out.println(((DerivedState)this.state).msg);
 		System.out.println(((DerivedState)this.state).extMsg);
 	}
@@ -69,28 +77,10 @@ public class LearnJava {
 		Base instance = new Derived();
 		instance.sayHi();
 		instance.getState();
+		System.out.println(instance.getClass());
+	
+		Derived d2 = new Derived();
 		
-		Month month = Month.Jan;
-		System.out.println("abc".equals(null));
-		
-		long time = System.currentTimeMillis();
-		
-		for(int i = 0; i < 1000*1000; i++){
-			final long t = System.nanoTime();
-//			long t = System.currentTimeMillis();
-		}
-		
-		System.out.println(System.currentTimeMillis() - time);
-		
-		
-		Vector<Object> vec = new Vector<Object>(10);
-		
-		Object o1 = new Object();
-		Object o2 = new Object();
-		
-		vec.add(o1);
-
-		System.out.println(vec.get(0).equals(o2));
 		
 	}
 
