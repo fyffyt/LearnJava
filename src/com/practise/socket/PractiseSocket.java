@@ -14,8 +14,23 @@ class Server extends Thread{
 	public void run(){
 		try {
 			svrSocket = new ServerSocket(svrPort);
-			ServerSocketChannel chn = svrSocket.getChannel();
-			ByteBuffer bbuf = new ByteBuffer(chn.read())
+			Socket clientSocket = svrSocket.accept();
+			BufferedReader in = new BufferedReader(
+						new InputStreamReader(
+								clientSocket.getInputStream()
+						)
+					);
+			PrintWriter out = new PrintWriter(
+					
+							clientSocket.getOutputStream()
+							
+					);
+			
+			String inputLine;
+			while((inputLine = in.readLine()) != null){
+				System.out.println("Received message: " + inputLine + " from " + clientSocket.toString());
+				out.println(inputLine);
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,7 +46,8 @@ public class PractiseSocket {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Server svr = new Server();
+		svr.start();
 	}
 
 }
