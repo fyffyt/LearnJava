@@ -16,7 +16,13 @@ class Base {
 		String msg = "status in base.";
 	}
 	BaseState state = null;
+	boolean loopTag = true;
 	void getState(){
+		if (loopTag == true){
+			loopTag = false;
+			this.getState();
+		}
+			
 		System.out.println(state.msg);
 		try {
 			this.clone();
@@ -65,7 +71,14 @@ class Derived extends Base {
 		initState();
 	}
 }
+
+
+
 public class LearnJava {
+	public static <T> T get(T t){
+		return t;
+	}
+	
 	private enum Month{
 		Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec;
 	}
@@ -81,7 +94,11 @@ public class LearnJava {
 	
 		Derived d2 = new Derived();
 		
-		
+		int a = 10;
+		float b = (float)1.1;
+		System.out.println(get(a));
+		System.out.println(get(b));
+		System.out.println(get(d2));
 	}
 
 }
