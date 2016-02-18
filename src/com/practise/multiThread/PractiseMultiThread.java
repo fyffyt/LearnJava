@@ -32,13 +32,22 @@ class DemoThread extends Thread{
 	}
 }
 
+class Context {
+	public synchronized int getInt(){
+		return new Random().nextInt();
+	}
+}
+
 class DemoRunnable implements Runnable{
 	private int count;
 	private int test_share_var;
+	private Context c;
 	public DemoRunnable(int a){
+		c = new Context();
 		test_share_var = a;
 	}
 	public void run(){
+		System.out.println("Context int: " + c.getInt());
 		System.out.println("Runnable: "+(++count));
 		System.out.println("share_var = " + test_share_var);
 	}
