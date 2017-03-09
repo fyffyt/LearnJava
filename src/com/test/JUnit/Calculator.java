@@ -34,7 +34,8 @@ public class Calculator {
     	try{
     		assert(false);
     	}catch(Exception e){
-    		System.out.println(e.getMessage());
+        	System.out.println("Oops.\n");
+        	System.out.println(e.getMessage());
     	}
     }
 }
